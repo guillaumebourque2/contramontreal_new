@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Guillaume Bourque">
+
+	<title></title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="cssContra.css">
+</head>
+
+<body onresize="resiz()">
+<div class="unilingual">
+	<button type="button" class="unilingual" onclick="unilingual()">
+		Français
+	</button>
+</div>
+
+<div class="header row">
+	<div class="col-6 col-m-6">
+		<img class="logo" src="images/CM15-Logo-v2-Screen-RGB-Clean-Cropped.jpg" alt="ContraMontreal logo" width="555">
+	</div>
+	<div class="col-6 col-m-6">
+		<div class="news" lang="en">
+			<a href="2016_09_24_en.html" target="_top"><button type="button" class="news-btn CommunityDances">
+			Next dance:<br>
+			Saturday, September 24, 2016<br>
+			House of Friendship
+			</button></a>
+		</div>
+		<div class="news" lang="fr">
+			<a href="2016_09_24_fr.html" target="_top"><button type="button" class="news-btn CommunityDances">
+			Prochaine danse&nbsp;:<br>
+			Samedi le 24 septembre 2016<br>
+			Maison de l'amitié
+			</button></a>
+		</div>	
+	</div>
+</div>
+
+<div class="container">
+<!--Schedules-->
+	<div class="row btnRow">
+		<div class="col-6 col-m-6" lang="en">
+			<button type="button" id="scheduleEnButton" onclick="accordionFunc('schedule', 'En')" class="accordionBtn scheduleBtn">Schedule</button>
+		</div>
+		<div class="col-6 col-m-6" lang="fr">
+			<button type="button" id="scheduleFrButton" onclick="accordionFunc('schedule', 'Fr')" class="accordionBtn scheduleBtn">Horaire</button>
+		</div>
+	</div>
+
+	<div id="scheduleEn" class="accordionPanel schedulePanel" lang="en">
+		<div class="row">
+			<div class="col-6 col-m-6">
+				<h2 class="BigDances">Big dances</h2>
+
+				<p><span style="font-size: 1.17em;"><strong>Big dances</strong> will now be held on <strong><em>Fridays</em></strong> (on the Friday before the first Saturday of the month)</span><br>
+				Exceptions: two <span class="specialDances">special dances</span> will be held on Sundays<br>
+				Fridays: 7:30 pm to 11 pm<br>
+				Sundays: 6:30 pm to 10 pm</p>
+
+				<div class="mapPanel">
+					<a href="https://www.google.ca/maps/place/405+Avenue+Fairmount+O,+Montr%C3%A9al,+QC+H2V/@45.5197085,-73.6006192,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc919802f7e4cf9:0xcfd84bfa0dc7e2d6!8m2!3d45.5197048!4d-73.5984252?hl=en" target="_blank">
+						<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+					</a>
+					<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+						<h3 class='onMap'>Ukrainian Hall</h3><p class='onMap'>405 Fairmount W.<br>(at Hutchison)<br>Montreal, H2V 4B4</p>
+					</div>
+					<div class="map ukrainianHall"></div>  <!--For Google Map details, see Javascript.-->
+				</div>
+
+				<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus">Laurier&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/bus-icon orange.png" alt="bus icon" class="metro-bus">51</p>
+			</div>
+
+			<div class="col-6 col-m-6">
+				<h2 class="CommunityDances">Community dances</h2>
+
+				<p>Fourth Saturday of each month (usually)<br>
+				7:30 pm to 11 pm</p>
+
+				<div class="mapPanel">
+					<a href="https://www.google.ca/maps/place/120+Avenue+Duluth+E,+Montr%C3%A9al,+QC+H2W+1H1/@45.5180166,-73.5782047,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91bccbf113ef3:0xa8834bf4db1d384?hl=en" target="_blank">
+						<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+					</a>
+					<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+						<h3 class='onMap'>House of Friendship</h3><p class='onMap'>120 Duluth E.<br>(at De Bullion)<br>Montreal, H2W 1H1</p>
+					</div>
+					<div class="map houseFriendship"></div>  <!--For Google Map details, see Javascript.-->
+				</div>
+
+				<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus" style="float: left;">Mont-Royal<br>Sherbrooke</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_09_24_en.html" target="_blank"><button type="button" class="accordionBtn CommunityDances">
+						Saturday, September 24, 2016<br>
+						Steve Jones, Gareth Jones, and Kate Bevan-Baker / On Call
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_09_30_en.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Friday, September 30, 2016<br>
+						Richard Forest &amp; friends / June Harman
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_10_22_en.html" target="_blank"><button type="button" class="accordionBtn CommunityDances" disabled>
+						Saturday, October 22, 2016<br>
+						Alexis Chartrand and Colin Savoie-Levac / On Call
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_11_13_en.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						<span class="specialDancesBg">Sunday</span>, November 13, 2016<br>
+						<span class="specialDancesBg">Portuguese Hall</span><br>
+						Klezmer Contra<br>
+						Rachel Lemisch &amp; friends / Leah Dolgoy
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_11_26_en.html" target="_blank"><button type="button" class="accordionBtn CommunityDances" disabled>
+						Saturday, November 26, 2016 <br>
+						Alexis Chartrand and Marc Maziade / On Call 
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_12_02_en.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Friday, December 2, 2016<br>
+						Genticorum / Dave Eisenstadter
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2017_01_06_en.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Friday, January 6, 2017<br>
+						Frost and Fire / Marian Rose
+					</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="scheduleFr" class="accordionPanel schedulePanel" lang="fr">
+		<div class="row">
+			<div class="col-6 col-m-6">
+				<h2 class="BigDances">Grandes danses</h2>
+
+				<p><span style="font-size: 1.17em;">Les <strong>Grandes danses</strong> auront maintenant lieu les <strong><em>vendredis</em></strong> (le vendredi avant le 1<sup style="font-size: 0.7em;">er</sup> samedi du mois)</span><br>
+				Exceptions&nbsp;: deux <span class="specialDances">danses spéciales</span> auront lieu les dimanches<br>
+				Vendredi&nbsp;: 19h30 à 23h<br>
+				Dimanche&nbsp;: 18h30 à 22h</p>
+
+				<div class="mapPanel">
+					<a href="https://www.google.ca/maps/place/405+Avenue+Fairmount+O,+Montr%C3%A9al,+QC+H2V/@45.5197085,-73.6006192,17z/data=!3m1!4b1!4m5!3m4!1s0x4cc919802f7e4cf9:0xcfd84bfa0dc7e2d6!8m2!3d45.5197048!4d-73.5984252?hl=fr" target="_blank">
+						<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+					</a>
+					<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+						<h3 class='onMap'>Salle ukrainienne</h3><p class='onMap'>405 Fairmount ouest<br>(coin Hutchison)<br>Montréal, H2V 4B4</p>
+					</div>
+					<div class="map ukrainianHall"></div>  <!--For Google Map details, see Javascript.-->
+				</div>
+
+				<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus">Laurier&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/bus-icon orange.png" alt="bus icon" class="metro-bus">51</p> 
+			</div>
+
+			<div class="col-6 col-m-6">
+				<h2 class="CommunityDances">Danses communautaires</h2>
+
+				<p>Le 4<sup>e</sup> samedi du mois (en général)<br>
+				19h30 à 23h</p>
+
+				<div class="mapPanel">
+					<a href="https://www.google.ca/maps/place/120+Avenue+Duluth+E,+Montr%C3%A9al,+QC+H2W+1H1/@45.5180166,-73.5782047,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91bccbf113ef3:0xa8834bf4db1d384?hl=fr" target="_blank">
+						<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+					</a>
+					<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+						<h3 class='onMap'>Maison de l'amitié</h3><p class='onMap'>120 Duluth est<br>(à De Bullion)<br>Montréal, H2W 1H1</p>
+					</div>
+					<div class="map houseFriendship"></div>  <!--For Google Map details, see Javascript.-->
+				</div>
+
+				<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus" style="float: left;">Mont-Royal<br>Sherbrooke</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_09_24_fr.html" target="_blank"><button type="button" class="accordionBtn CommunityDances">
+						Samedi le 24 septembre 2016<br>
+						Steve Jones, Gareth Jones et Kate Bevan-Baker / On Call
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_09_30_fr.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Vendredi le 30 septembre 2016<br>
+						Richard Forest et amis / June Harman
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_10_22_fr.html" target="_blank"><button type="button" class="accordionBtn CommunityDances" disabled>
+						Samedi le 22 octobre 2016<br>
+						Alexis Chartrand et Colin Savoie-Levac / On Call
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_11_13_fr.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						<span class="specialDancesBg">Dimanche</span> le 13 novembre 2016<br>
+						<span class="specialDancesBg">Salle portuguaise</span><br>
+						Klezmer Contra<br>
+						Rachel Lemisch et amis / Leah Dolgoy
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn CommunityDances">
+					<a href="2016_11_26_fr.html" target="_blank"><button type="button" class="accordionBtn CommunityDances" disabled>
+						Samedi le 26 novembre 2016<br>
+						Alexis Chartrand et Marc Maziade / On Call 
+					</button></a>
+				</div>
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2016_12_02_fr.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Vendredi le 2 décembre 2016<br>
+						Genticorum / Dave Eisenstadter
+					</button></a>
+				</div>
+			</div>
+			<div class="row dateRow">
+				<div class="col-6 col-m-6 dateBtn BigDances">
+					<a href="2017_01_06_fr.html" target="_blank"><button type="button" class="accordionBtn BigDances" disabled>
+						Vendredi le 6 janvier 2017<br>
+						Frost and Fire / Marian Rose
+					</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<!--What is Contra?-->
+	<div class="row btnRow">
+		<div class="col-6 col-m-6" lang="en">
+			<button type="button" id="contraEnButton" onclick="accordionFunc('contra', 'En')" class="accordionBtn contraBtn">Contra FAQ</button>
+		</div>
+		<div class="col-6 col-m-6" lang="fr">
+			<button type="button" id="contraFrButton" onclick="accordionFunc('contra', 'Fr')" class="accordionBtn contraBtn">FAQ sur le contra</button>
+		</div>
+	</div>
+
+	<div id="contraEn" class="accordionPanel contraPanel" lang="en">
+		<h2>What is a New England contradance?</h2>
+		<p>During a New England contradance, commonly known as a <strong>contra</strong>, each couple will execute a series of figures with every other couple successively. Figures are explained and guided by a caller, and danced to the rhythm of traditional live music.</p>
+		<p>Roles are traditionally called <strong>Gents</strong> and <strong>Ladies</strong>, but they don't have to match the gender of the dancer. Feel free to dance whichever role you'd like, as it is common to see dancers trying the role not traditionally associated with their gender.</p>
+
+		<h2>I don't have a partner</h2>
+		<p>You don't need one. The tradition in contra is to change partners for each dance so it's usually easy to find someone to dance with.</p>
+	</div>
+
+	<div id="contraFr" class="accordionPanel contraPanel" lang="fr">
+		<h2>Qu'est-ce qu'une contredanse de Nouvelle-Angleterre (Contra)&nbsp;?</h2>
+		<p>Dans une contredanse de Nouvelle-Angleterre, communément appelée un <em>contra</em>, chaque couple accomplira une séquence de figures sucessivement avec chacun des autres couples. Les figures sont expliquées et guidées par un calleur, et dansées au rythme d'un groupe de musique traditionnelle.</p>
+		<p>Les rôles traditionnels se nomment <em>Gents</em> (Messieurs) et <em>Ladies</em> (Mesdames), mais ils ne correspondent pas nécessairement au genre des partenaires. Sentez vous libre de danser le rôle de votre choix, car il est commun que des danseurs essayent le rôle non traditionnellement associé à leur genre.</p>
+
+		<h2>Je n'ai pas de partenaire</h2> 
+		<p>Vous n'en avez pas besoin. Comme la tradition est de changer de partenaire à chaque danse, c'est généralement facile de trouver quelqu'un avec qui danser.</p>
+	</div>
+
+<!--Contacts-->
+	<div class="row btnRow">
+		<div class="col-6 col-m-6" lang="en">
+			<button type="button" id="contactsEnButton" onclick="accordionFunc('contacts', 'En')" class="accordionBtn contactsBtn">Stay in Contact</button>
+		</div>
+		<div class="col-6 col-m-6" lang="fr">
+			<button type="button" id="contactsFrButton" onclick="accordionFunc('contacts', 'Fr')" class="accordionBtn contactsBtn">Restez en contact</button>
+		</div>
+	</div>
+
+	<div id="contactsEn" class="accordionPanel contactsPanel" lang="en">
+		<p>Email us: <a href="mailto:info@contramontreal.org" target="_blank">info@contramontreal.org</a></p>
+	</div>
+
+	<div id="contactsFr" class="accordionPanel contactsPanel" lang="fr">
+		<p>Contactez-nous par courriel&nbsp;: <a href="mailto:info@contramontreal.org" target="_blank">info@contramontreal.org</a></p>
+	</div>
+
+</div>
+
+
+<!--To load jQuery and Javascript code-->	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jsContra.js"></script>
+
+<!-- Google API for Google maps. It is set-up to allow the rest of the page to load even if the API is not ready yet.-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg1RhqjE2wKDFYmzpjikt5ahQUK2uFttI&callback=initializeMaps"></script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Guillaume Bourque">
+
+	<title></title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="cssContra.css">
+</head>
+
+<body class="dance">
+<div class="header row">
+	<div class="col-6 col-m-6">
+		<img class="logo" src="images/CM15-Logo-v2-Screen-RGB-Clean-Cropped.jpg" alt="Logo de ContraMontreal" width="555">
+	</div>
+	<div class="nav-icons col-6 col-m-6">
+		<a href="2016_09_24_en.html" target="_top"><button class="nav-icons" type="button">
+			<img class="nav-icons" src="images/english-flag32.png" alt="English version" width="32">
+		</button></a>
+		<div id="icon-shadow-1" class="icon-shadow"></div>
+		<a href="index.html?lang=fr" target="_top"><button class="nav-icons" type="button">
+			<img class="nav-icons" src="images/home-icon.png" alt="Retour à l'accueil" width="32">
+		</button></a>
+		<div id="icon-shadow-2" class="icon-shadow"></div>		
+	</div>
+</div>
+
+<div class="row col-12 col-m-12">
+	<h2 class="CommunityDances">Danse communautaire<span class="date-header">Samedi le 24 septembre 2016</span></h2>
+</div>
+
+<div class="row">
+	<div class="col-6 col-m-6">
+		<img src="images/20160924.jpg" alt="Steve Jones, Gareth Jones et Kate Bevan-Baker">
+
+		<h3>Steve Jones, Gareth Jones et <a href="http://www.katebevanbaker.com/" target="_blank">Kate Bevan-Baker</a></h3>
+		<blockquote cite="http://www.siamsa.org/pages/ceiliband-fr.htm">Le groupe interprète des airs à danser traditionnels et modernes dans un style authentique et avec l'élan qu'adore les danseurs.</blockquote>
+		<p class="quote-source">&#8212; <a href="http://www.siamsa.org/pages/ceiliband-fr.htm" target="_blank">Siamsa</a>, École de musique irlandaise</p>
+	</div>
+
+	<div class="col-6 col-m-6">
+		<img src="images/On Call 20160924.jpg" alt="On Call, le groupe de calleurs de Montréal">
+
+		<h3>On Call</h3>
+		<p class="description">On Call, le groupe de calleurs basé à Montréal, est composé de Guillaume Bourque, Leah Dolgoy, Marie-Michèle Fournier, Sean McCutcheon, et de leurs amis.</p>
+		<p class="description">En animant et en callant à nos danses mensuelles à la Maison de l'Amitié, nous affinons nos compétences et aidons à construire une communauté locale de musiciens, de calleurs, et de contredanseurs enthousiastes.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6 col-m-6">
+		<div class="mapPanel">
+			<a href="https://www.google.ca/maps/place/120+Avenue+Duluth+E,+Montr%C3%A9al,+QC+H2W+1H1/@45.5180166,-73.5782047,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91bccbf113ef3:0xa8834bf4db1d384?hl=fr" target="_blank">
+				<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+			</a>
+			<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+				<h3 class='onMap'>Maison de l'amitié</h3><p class='onMap'>120 Duluth est<br>(à De Bullion)<br>Montréal, H2W 1H1</p>
+			</div>
+			<div class="map houseFriendship"></div>  <!--For Google Map details, see Javascript.-->
+		</div>
+
+		<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus" style="float: left;">Mont-Royal<br>Sherbrooke</p>
+	</div>
+	<div class="col-6 col-m-6">
+		<h3 class="when">Quand</h3>
+		<p class="description">Samedi le 24 septembre 2016<br>
+		19h30 à 20h&nbsp;: Session d'initiation<br>
+		<span style="padding-left: 16px">Conseillée pour les débutant(e)s</span><br>
+		20h à 23h&nbsp;: Danse</p>
+
+		<h3 class="prices">Tarifs</h3>
+		<p class="description">Régulier&nbsp;: 10&nbsp;$<br>
+		Étudiant(e)s&nbsp;: 8&nbsp;$<br>
+		Enfants de moins de 13 ans&nbsp;: Gratuit</p>
+	</div>
+</div>
+
+
+<!--To load jQuery and Javascript code-->	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jsContra.js"></script>
+
+<!-- Google API for Google maps. It is set-up to allow the rest of the page to load even if the API is not ready yet.-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg1RhqjE2wKDFYmzpjikt5ahQUK2uFttI&callback=initializeMaps"></script>
+
+</body>
+</html>

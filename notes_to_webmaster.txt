@@ -1,0 +1,2 @@
+Français : les caractères accentués peuvent maintenant être inscrits tel quels (plus besoin de &-codes, sauf pour les espaces insécables)
+

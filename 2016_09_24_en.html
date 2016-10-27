@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Guillaume Bourque">
+
+	<title></title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="cssContra.css">
+</head>
+
+<body class="dance">
+<div class="header row">
+	<div class="col-6 col-m-6">
+		<img class="logo" src="images/CM15-Logo-v2-Screen-RGB-Clean-Cropped.jpg" alt="ContraMontreal logo" width="555">
+	</div>
+	<div class="nav-icons col-6 col-m-6">
+		<a href="2016_09_24_fr.html" target="_top"><button class="nav-icons" type="button">
+			<img class="nav-icons" src="images/french-flag32.png" alt="Version française" width="32">
+		</button></a>
+		<div id="icon-shadow-1" class="icon-shadow"></div>
+		<a href="index.html" target="_top"><button class="nav-icons" type="button">
+			<img class="nav-icons" src="images/home-icon.png" alt="Back to home page" width="32">
+		</button></a>
+		<div id="icon-shadow-2" class="icon-shadow"></div>		
+	</div>
+</div>
+
+<div class="row col-12 col-m-12">
+	<h2 class="CommunityDances">Community dance<span class="date-header">Saturday, September 24, 2016</span></h2>
+</div>
+
+<div class="row">
+	<div class="col-6 col-m-6">
+		<img src="images/20160924.jpg" alt="Steve Jones, Gareth Jones and Kate Bevan-Baker">
+
+		<h3>Steve Jones, Gareth Jones, and <a href="http://www.katebevanbaker.com/" target="_blank">Kate Bevan-Baker</a></h3>
+		<blockquote cite="http://www.siamsa.org/pages/ceiliband.htm">The band plays traditional and modern Irish dance tunes in an authentic ceili-band style, injecting into the tunes the lift and drive that dancers love.</blockquote>
+		<p class="quote-source">&#8212; <a href="http://www.siamsa.org/pages/ceiliband.htm" target="_blank">Siamsa</a>, School of Irish Music</p>
+	</div>
+
+	<div class="col-6 col-m-6">
+		<img src="images/On Call 20160924.jpg" alt="On Call, Montreal's caller collective">
+
+		<h3>On Call</h3>
+		<p class="description">On Call, the Montreal-based callers' collective, consists of Guillaume Bourque, Leah Dolgoy, Marie-Michèle Fournier, Sean McCutcheon, and their friends.</p>
+		<p class="description">By hosting, and calling at, our monthly dance at the House of Friendship, we hone our skills and help build a community of local musicians, callers, and enthusiastic contradancers.</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-6 col-m-6">
+		<div class="mapPanel">
+			<a href="https://www.google.ca/maps/place/120+Avenue+Duluth+E,+Montr%C3%A9al,+QC+H2W+1H1/@45.5180166,-73.5782047,17z/data=!3m1!4b1!4m2!3m1!1s0x4cc91bccbf113ef3:0xa8834bf4db1d384?hl=en" target="_blank">
+				<div class="maplink"></div>  <!--To overlap an <a> link above maps, so that clicking anywhere opens a link to Google Maps, with the address already filled in.-->
+			</a>
+			<div class="mapAlt">   <!--Text to be displayed both in the map infowindow, and as an alternative if Google Maps does not load and for non-visual compatibility. Must be placed just before the map.-->
+				<h3 class='onMap'>House of Friendship</h3><p class='onMap'>120 Duluth E.<br>(at De Bullion)<br>Montreal, H2W 1H1</p>
+			</div>
+			<div class="map houseFriendship"></div>  <!--For Google Map details, see Javascript.-->
+		</div>
+
+		<p><img src="images/metro-icon orange.png" alt="metro icon" class="metro-bus" style="float: left;">Mont-Royal<br>Sherbrooke</p>
+	</div>
+	<div class="col-6 col-m-6">
+		<h3 class="when">When</h3>
+		<p class="description">Saturday, September 24, 2016<br>
+		7:30 pm - 8 pm: Introductory session<br>
+		<span style="padding-left: 16px">Recommended for new dancers</span><br>
+		8 pm - 11 pm: Dance</p>
+
+		<h3 class="prices">Prices</h3>
+		<p class="description">Regular: $10<br>
+		Students: $8<br>
+		Children under 13: Free</p>
+	</div>
+</div>
+
+
+<!--To load jQuery and Javascript code-->	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="jsContra.js"></script>
+
+<!-- Google API for Google maps. It is set-up to allow the rest of the page to load even if the API is not ready yet.-->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg1RhqjE2wKDFYmzpjikt5ahQUK2uFttI&callback=initializeMaps"></script>
+
+</body>
+</html>

@@ -1,0 +1,344 @@
+/*To uniformize margins accross browsers*/
+body {
+    margin: 8px;
+    padding: 0;
+}
+
+/*Responsive Web Design (RWD)*/
+    * {
+        box-sizing: border-box;
+    }
+
+    /* For smartphones RWD: */
+    [class*="col-"] {
+        width: 100%;
+    }
+    .btnRow [lang|=fr], .news[lang|=fr] {
+        display: none;
+    }
+
+    @media only screen and (min-width: 601px) {
+        /* For tablets RWD: */
+        .col-m-1 {width: 8.33%;}
+        .col-m-2 {width: 16.66%;}
+        .col-m-3 {width: 25%;}
+        .col-m-4 {width: 33.33%;}
+        .col-m-5 {width: 41.66%;}
+        .col-m-6 {width: 50%;}
+        .col-m-7 {width: 58.33%;}
+        .col-m-8 {width: 66.66%;}
+        .col-m-9 {width: 75%;}
+        .col-m-10 {width: 83.33%;}
+        .col-m-11 {width: 91.66%;}
+        .col-m-12 {width: 100%;}
+
+        .btnRow [lang|=fr], .news[lang|=fr] {
+            display: block;
+        }
+        div.unilingual {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 993px) {
+        /* For desktop RWD: */
+        .col-1 {width: 8.33%;}
+        .col-2 {width: 16.66%;}
+        .col-3 {width: 25%;}
+        .col-4 {width: 33.33%;}
+        .col-5 {width: 41.66%;}
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        .accordionBtn:hover, button.news-btn:hover {
+            background-color: rgb(141,198,63);
+            box-shadow: 0 0 11px 0 rgb(119,119,119);
+            -moz-box-shadow: 0 0 11px 0 rgb(119,119,119);
+            -webkit-box-shadow: 0 0 11px 0 rgb(119,119,119);
+        }
+        button.BigDances:hover, button.CommunityDances:hover {
+            background-color: rgb(256,105,56);
+        }
+
+    }
+
+    /*All columns with float left, but rows won't get mingled*/
+    [class*="col-"] {
+        float: left;
+        padding: 0.01em 16px;
+    }.row::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+
+/*Images*/
+img {   
+    border: 0;
+    max-width: 100%;
+    height: auto;
+}
+
+/*News tiles*/
+button.news-btn {
+    color: white;
+    font-size: 2em;
+    text-align: left;
+    vertical-align: middle;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+div.news {
+    padding-top: 16px;
+}
+@media only screen and (min-width: 601px) {
+    div.news:first-child {
+        padding-top: 0;
+    }
+}
+
+/*Smartphone unilingual button*/
+div.unilingual {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+button.unilingual {
+    transform: rotate(270deg) translateX(-50%) translateY(100%);
+    -webkit-transform: rotate(270deg) translateX(-50%) translateY(100%);
+    -moz-transform: rotate(270deg) translateX(-50%) translateY(100%);
+    -o-transform: rotate(270deg) translateX(-50%) translateY(100%);
+    -ms-transform: rotate(270deg) translateX(-50%) translateY(100%);
+    background-color: red;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-top: 2px;
+    padding-bottom: 16px;
+    border-radius: 15% 15% 0 0;
+}
+
+
+/*Accordions*/
+.accordionBtn {
+    background-color: rgb(43,57,144);
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px;
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.accordionBtn.active {
+    background-color: rgb(111,168,33);
+}
+.btnRow {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.container {
+    padding: 0;
+}
+.accordionPanel {
+    display: none;
+    padding:0.01em 32px;
+}
+
+/*Schedule Panels*/
+.schedulePanel {
+    padding:0.01em 16px;
+}
+h2.BigDances, h2.CommunityDances, h3 {
+    margin: 16px auto;
+}
+h2.BigDances {
+    background-color: rgb(190,30,45);
+    color: white;
+}
+h2.CommunityDances {
+    background-color: rgb(141,198,63);
+    color: white;
+}
+
+
+/*Google Maps*/
+.map, .maplink, .mapAlt {
+    width: 100%;
+    height: 250px;
+}
+.mapPanel {
+    position: relative;
+}
+.maplink { 
+    position: absolute;
+    z-index: 5;
+}
+.onMap {
+    margin: 0;
+}
+h3.onMap {
+    padding-bottom: 5px;
+}
+.mapAlt {
+    position: absolute;
+    z-index: -5;
+    border: 1px solid black;
+    padding: 16px;
+}
+.metro-bus {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+
+/*Date buttons */
+button.BigDances, button.CommunityDances {
+    font-size: 1.25em;
+}
+button[disabled] {
+    cursor: not-allowed;
+}
+button.BigDances {
+    background-color: rgb(190,30,45);
+}
+button.CommunityDances {
+    background-color: rgb(141,198,63);
+}
+div.dateBtn {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+@media only screen and (min-width: 601px) {
+    /* Dates in two columns, for tablets and desktop only: */
+    div.dateBtn {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    div.dateRow {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    div.CommunityDances {
+        align-self: flex-start;
+        margin-bottom: 20px;
+        margin-left: auto;
+        order: 1;
+        -webkit-order: 1;
+        transform: translateY(-10px);
+    }
+    div.BigDances {
+        align-self: flex-end;
+        margin-top: 20px;
+        margin-right: auto;
+        order: 0;
+        -webkit-order: 0;
+        transform: translateY(10px);
+    }
+    div.dateRow:last-child {
+        padding-bottom: 26px;
+    }
+}
+
+span.specialDances {
+    color: red;
+}
+span.specialDancesBg {
+    background-color: red;
+    padding: 2px 4px;
+    border-radius: 1.5em;
+}
+
+
+/*Dance page-specific css*/
+
+/*Navigation icons*/
+div.nav-icons {
+    position: relative;
+    padding: 12px 40px;
+}
+button.nav-icons {
+    float: right;
+    width: 56px;
+    height: 56px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+img.nav-icons {
+    margin: auto;
+}
+div.icon-shadow {
+    width: 0;
+    height: 0;
+    border-radius: 100%;
+    position: absolute;
+    z-index: -1;
+    box-shadow: 0 0 24px 16px rgb(149,149,149);
+    -moz-box-shadow: 0 0 24px 16px rgb(149,149,149);
+    -webkit-box-shadow: 0 0 24px 16px rgb(149,149,149);
+}
+#icon-shadow-1 {
+    right: 68px;
+    top: 40px;
+}
+#icon-shadow-2 {
+    right: 124px;
+    top: 40px;
+}
+
+/*Other dance-specific css*/
+body.dance {
+    max-width: 800px;
+    margin: 8px auto;
+}
+span.date-header {
+    float: right;
+    margin-bottom: 16px;
+}
+h2.BigDances span.date-header {
+    background-color: rgb(190,30,45);
+    color: white;
+}
+h2.CommunityDances span.date-header {
+    background-color: rgb(141,198,63);
+    color: white;
+}
+blockquote {
+    font-style: italic;
+    margin: 16px;
+}
+p.quote-source {
+    margin-top: -10px;
+    padding-left: 50px;
+}
+p.description {
+    margin: 16px;
+}
+h3.when {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+h3.prices {
+    margin: 16px auto;
+}
+
+
